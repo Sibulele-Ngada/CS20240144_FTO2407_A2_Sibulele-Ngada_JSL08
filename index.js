@@ -16,7 +16,11 @@ class BankBranch {
         }
         return bankBranchInstance.instance;
     }
-
+    
+    // 4. Add methods to the `BankBranch` class for managing branch-related information. For example, you can add a method like `getBranchInfo` to retrieve branch details.
+    getBranchInfo(){
+        return branchInfo;
+    }
 }
 
 // 5. In the usage section:
