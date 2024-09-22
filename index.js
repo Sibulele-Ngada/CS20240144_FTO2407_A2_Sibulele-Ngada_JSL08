@@ -3,7 +3,21 @@
 // 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
 const bankBranchInstance = new BankBranch();
 // 2. Define a class called `BankBranch` for managing branch information.
+class BankBranch {
+    // 3. In the `BankBranch` class:
+    //    - Create a constructor that takes `branchInfo` as a parameter.
+    //    - Inside the constructor, check if the `bankBranchInstance` variable is null (indicating no instance exists).
+    //    - If `bankBranchInstance` is null, create a new instance with the provided `branchInfo` and assign it to `bankBranchInstance`.
+    //    - Return the `bankBranchInstance` whether it's newly created or existing.
+    constructor(branchInfo){
+        this.branchInfo = branchInfo;
+        if (bankBranchInstance.instance === null){
+            bankBranchInstance.instance = this;
+        }
+        return bankBranchInstance.instance;
+    }
 
+}
 
 // 5. In the usage section:
 //    - Create instances of the `BankBranch` class, such as `branchA` and `branchB`, with different branch information.
